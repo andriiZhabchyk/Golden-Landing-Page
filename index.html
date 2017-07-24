@@ -5,10 +5,10 @@
     <title>MetroStyle</title>
     <link rel="stylesheet" href="node_modules/normalize.css/normalize.css" />
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="node_modules/aos/dist/aos.css" />
     <link rel="stylesheet" href="dist/style/style.css" />
 </head>
 <body>
-
     <div id="wrapper">
         <header class="default">
             <div class="container clearfix"></div>
@@ -16,14 +16,13 @@
                     <a href=""><img src="assets/img/logo.png" alt=""></a>
                 </div>
             <ul class="nav">
-                <li><a href="#home">Home</a></li>
+                <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </header>
-
         <section id="home">
             <div class="home">
                 <h3>Welcome To Our Studio!</h3>
@@ -31,90 +30,86 @@
                 <button class="btn"><a href="#services">Tell Me More</a></button>
             </div>
         </section>
-
         <section id="services">
             <div class="container">
-                <h2 class="title">Services</h2>
-                <p class="description">Proin iaculis purus consequat sem cure.</p>
+                <h2 class="title" data-aos="flip-left">Services</h2>
+                <p class="description" data-aos="flip-right">Proin iaculis purus consequat sem cure.</p>
                 <div class="services-wrap clearfix">
                     <div class="services-item commerce">
                         <h5 class="title">E-Commerce</h5>
-                        <p>Proin iaculis purus consequat sem cure
+                        <p class="services">Proin iaculis purus consequat sem cure
                             digni ssim. Donec porttitora entum suscipit</p>
                     </div>
                     <div class="services-item responsive">
                         <h5 class="title">Responsive Web</h5>
-                        <p>Proin iaculis purus consequat sem cure
+                        <p class="services">Proin iaculis purus consequat sem cure
                             digni ssim. Donec porttitora entum suscipit</p>
                     </div>
                     <div class="services-item security">
                         <h5 class="title">Web Security</h5>
-                        <p>Proin iaculis purus consequat sem cure
+                        <p class="services">Proin iaculis purus consequat sem cure
                             digni ssim. Donec porttitora entum suscipit</p>
                     </div>
                 </div>
             </div>
         </section>
-
         <section id="portfolio">
             <div class="container">
-                <h2 class="title">Our portfolio</h2>
-                <p class="description">Proin iaculis purus consequat sem cure.</p>
+                <h2 data-aos="flip-left">Our portfolio</h2>
+                <p class="description" data-aos="flip-right">Proin iaculis purus consequat sem cure.</p>
                 <div class="portfolio-wrap clearfix">
-                    <div class="portfolio-item">
-                        <a href=""><img src="assets/img/p-item1.jpg" alt=""></a>
+                    <div class="portfolio-item" data-aos="fade-up">
+                        <a href="" class="hover"><img src="assets/img/p-item1.jpg" alt=""></a>
                         <div class="p-item-footer">
-                            <h5 class="title">Ebony & Ivory</h5>
+                            <h5 class="portfolio-title">Ebony & Ivory</h5>
                             <span>Branding</span>
                         </div>
                     </div>
-                    <div class="portfolio-item">
-                        <a href=""><img src="assets/img/p-item2.jpg" alt=""></a>
+                    <div class="portfolio-item" data-aos="fade-up">
+                        <a href="" class="hover"><img src="assets/img/p-item2.jpg" alt=""></a>
                         <div class="p-item-footer">
-                            <h5 class="title">Smart Stationary</h5>
+                            <h5 class="portfolio-title">Smart Stationary</h5>
                             <span>Print Design</span>
                         </div>
                     </div>
-                    <div class="portfolio-item">
-                        <a href=""><img src="assets/img/p-item3.jpg" alt=""></a>
+                    <div class="portfolio-item" data-aos="fade-up">
+                        <a href="" class="hover"><img src="assets/img/p-item3.jpg" alt=""></a>
                         <div class="p-item-footer">
-                            <h5 class="title">Clever Poster</h5>
+                            <h5 class="portfolio-title">Clever Poster</h5>
                             <span>Print Design</span>
                         </div>
                     </div>
-                    <div class="portfolio-item">
-                        <a href=""><img src="assets/img/p-item4.jpg" alt=""></a>
+                    <div class="portfolio-item" data-aos="fade-up">
+                        <a href="" class="hover"><img src="assets/img/p-item4.jpg" alt=""></a>
                         <div class="p-item-footer">
-                            <h5 class="title">Vinyl Record</h5>
+                            <h5 class="portfolio-title">Vinyl Record</h5>
                             <span>Product Mock-Up</span>
                         </div>
                     </div>
-                    <div class="portfolio-item">
-                        <a href=""><img src="assets/img/p-item5.jpg" alt=""></a>
+                    <div class="portfolio-item" data-aos="fade-up">
+                        <a href="" class="hover"><img src="assets/img/p-item5.jpg" alt=""></a>
                         <div class="p-item-footer">
-                            <h5 class="title">Treehouse Template</h5>
+                            <h5 class="portfolio-title">Treehouse Template</h5>
                             <span>Web Design</span>
                         </div>
                     </div>
-                    <div class="portfolio-item">
-                        <a href=""><img src="assets/img/p-item6.jpg" alt=""></a>
+                    <div class="portfolio-item" data-aos="fade-up">
+                        <a href="" class="hover"><img src="assets/img/p-item6.jpg" alt=""></a>
                         <div class="p-item-footer">
-                            <h5 class="title">Burned Logo </h5>
+                            <h5 class="portfolio-title">Burned Logo </h5>
                             <span>Branding</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
-
         <section id="about">
             <div class="container">
-                <h2 class="title">About us</h2>
-                <p class="description">Proin iaculis purus consequat sem cure. </p>
+                <h2 class="title" data-aos="flip-left">About us</h2>
+                <p class="description" data-aos="flip-right">Proin iaculis purus consequat sem cure. </p>
                 <div class="about-wrap">
                     <div class="about-item clearfix">
-                        <div class="about-text left text-right">
+                        <div class="about-text left text-right" data-aos-offset="200" data-aos="fade-left">
                             <h5 class="title">July 2010 <br> Our Humble Beginnings</h5>
                             <p> Proin iaculis purus consequat sem cure
                                 digni ssim. Donec porttitora entum suscipit
@@ -122,12 +117,12 @@
                                 iaculis purus consequat sem cure digni
                                 ssim. Donec porttitora entum suscipit.</p>
                         </div>
-                        <div class="about-img left">
+                        <div class="about-img left" data-aos="fade-down">
                             <img src="assets/img/about1.png" alt="">
                         </div>
                     </div>
                     <div class="about-item clearfix">
-                        <div class="about-text right text-left">
+                        <div class="about-text right text-left" data-aos-offset="200" data-aos="fade-right">
                             <h5 class="title">January 2011<br> Facing Startup Battles</h5>
                             <p> Proin iaculis purus consequat sem cure
                                 digni ssim. Donec porttitora entum suscipit
@@ -136,24 +131,24 @@
                                 ssim. Donec porttitora entum suscipit aenean
                                 rhoncus posuere odio in tincidunt.</p>
                         </div>
-                        <div class="about-img right">
+                        <div class="about-img right" data-aos="fade-down">
                             <img src="assets/img/about2.png" alt="">
                         </div>
                     </div>
                     <div class="about-item clearfix">
-                        <div class="about-text left text-right">
+                        <div class="about-text left text-right" data-aos-offset="200" data-aos="fade-left">
                             <h5 class="title">December 2012 <br> Enter The Dark Days</h5>
                             <p> Proin iaculis purus consequat sem cure
                                 digni ssim. Donec porttitora entum suscipit
                                 aenean rhoncus posuere odio in tincidunt. Proin
                                 iaculis purus consequat sem cure digni.</p>
                         </div>
-                        <div class="about-img left">
+                        <div class="about-img left" data-aos="fade-down">
                             <img src="assets/img/about3.png" alt="">
                         </div>
                     </div>
                     <div class="about-item clearfix">
-                        <div class="about-text right text-left">
+                        <div class="about-text right text-left" data-aos-offset="200" data-aos="fade-right">
                             <h5 class="title">February 2014 <br> Our Triumph</h5>
                             <p> Proin iaculis purus consequat sem cure
                                 digni ssim. Donec porttitora entum suscipit
@@ -161,76 +156,87 @@
                                 iaculis purus consequat sem cure digni
                                 ssim. Donec porttitora entum suscipit aenean.</p>
                         </div>
-                        <div class="about-img right">
+                        <div class="about-img right" data-aos="fade-down">
                             <img src="assets/img/about4.png" alt="">
                         </div>
                     </div>
-                    <div class="about-link">
+                    <div class="about-link" data-aos="fade-down" data-aos-offset="200">
                         <a href="#" class="about-link-text">Our <br /> Story <br /> Continues <br /> ...</a>
                     </div>
                 </div>
             </div>
         </section>
-
         <section id="team">
             <div class="container">
-                <h2 class="title">our amazing team</h2>
-                <p class="description">Proin iaculis purus consequat sem cure. </p>
+                <h2 class="title" data-aos="flip-left">our amazing team</h2>
+                <p class="description" data-aos="flip-right">Proin iaculis purus consequat sem cure. </p>
                 <div class="team">
-                    <div class="item-employer clearfix">
+                    <div class="item-employer" data-aos="fade-down">
                         <img src="/assets/img/employer.png" alt="">
                         <h3>Kimberly Thompson </br> <span>Marketer</span></h3>
                         <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                         <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                         <a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
                     </div>
-                    <div class="item-employer">
+                    <div class="item-employer" data-aos="fade-down">
                         <img src="/assets/img/employer.png" alt="">
                         <h3>Rico Massimo </br> <span>Coder</span></h3>
                         <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                         <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                         <a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
                     </div>
-                    <div class="item-employer">
+                    <div class="item-employer" data-aos="fade-down">
                         <img src="/assets/img/employer.png" alt="">
                         <h3>Uku Mason </br> <span>Graphic Designer</span></h3>
                         <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                         <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                         <a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
                     </div>
-                    <p>Proin iaculis purus consequat sem cure  digni ssim donec porttitora entum suscipitaenean rhoncus posuere odio in tincidunt proin iaculis.</p>
+                    <p data-aos="fade-up">Proin iaculis purus consequat sem cure  digni ssim donec porttitora entum suscipitaenean rhoncus posuere odio in tincidunt proin iaculis.</p>
                 </div>
             </div>
         </section>
-        <section>
+        <section id="partners">
             <div class="partners">
-                <img src="assets/img/partners_1.png" alt="">
-                <img src="assets/img/partners_2.png" alt="">
-                <img src="assets/img/partners_3.png" alt="">
-                <img src="assets/img/partners_4.png" alt="">
+                <a href="#"><img src="assets/img/partners_1.png" alt="" data-aos="fade-right"/></a>
+                <a href="#"><img src="assets/img/partners_2.png" alt="" data-aos="fade-right" data-aos-offset="100"/></a>
+                <a href="#"><img src="assets/img/partners_3.png" alt="" data-aos="fade-right" data-aos-offset="150"/></a>
+                <a href="#"><img src="assets/img/partners_4.png" alt="" data-aos="fade-right" data-aos-offset="200"/></a>
             </div>
         </section>
         <section id="contact">
             <div class="container">
-                <h2 class="title">Contact us</h2>
-                <p class="description">Proin iaculis purus consequat sem cure.</p>
-                <form class="clearfix">
+                <h2 class="title" data-aos="flip-left">Contact us</h2>
+                <p class="description" data-aos="flip-right">Proin iaculis purus consequat sem cure.</p>
+                <form>
                     <div class="form-group">
-                        <input type="text" placeholder="YOUR NAME *" required="required"/> <br>
-                        <input type="text" placeholder="YOUR E-MAIL *"  required="required"/> <br>
-                        <input type="text" placeholder="SUBJECT" required="required"/> <br>
+                        <input type="text" placeholder="YOUR NAME *" required="required" data-aos="fade-left"/> <br>
+                        <input type="text" placeholder="YOUR E-MAIL *"  required="required" data-aos="fade-left"/> <br>
+                        <input type="text" placeholder="SUBJECT" required="required" data-aos="fade-left"/> <br>
                     </div>
-                    <textarea name="massage" class="input-right" id="" cols="30" rows="10" placeholder="YOUR MASSAGE *" required="required"></textarea>
-                    <div class="btn">
-                        <button>Send Message</button>
-                    </div>
+                    <textarea name="massage" class="input-right" id="" cols="30" rows="10" placeholder="YOUR MASSAGE *" required="required" data-aos="fade-right"></textarea>
+                    <button>Send Message</button>
                 </form>
             </div>
         </section>
+        <footer>
+            <div class="container">
+                <div class="copyright">
+                    <p>&copy; <span class="copyright-text">Copyright 2014</span></p>
+                </div>
+                <div class="social">
+                    <a href="#"><img src="assets/img/social_1.png" alt=""></a>
+                    <a href="#"><img src="assets/img/social_2.png" alt=""></a>
+                    <a href="#"><img src="assets/img/social_3.png" alt=""></a>
+                    <a href="#"><img src="assets/img/social_4.png" alt=""></a>
+                </div>
+            </div>
+        </footer>
     </div>
-
     <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="node_modules/jquery-parallax.js/parallax.min.js"></script>
-    <script type="text/javascript" src="assets/js/effects.js"></script>
+    <script type="text/javascript" src="node_modules/animejs/anime.min.js"></script>
+    <script type="text/javascript" src="node_modules/aos/dist/aos.js"></script>
+    <script type="text/javascript" src="dist/js/effects.js"></script>
 </body>
 </html>
