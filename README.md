@@ -1,2 +1,2 @@
 # Golden-Landing-Page
-'Golden Agency' landing page. Responsive design.
+'Golden Agency' landing page.
