@@ -9,6 +9,8 @@ $(document).ready(function(){
     portfolioHover(); //call function portfolio hover
     aosAnimate(); //call aos animate function
     activeClassNav();//call active navigation function
+    toggleMenu();// call toggle menu function
+    removeEffectsTextH ();// call function remove effects into h3 & p into section
     /*parallaxEffectContact();// call parallax function contact us*/
 });
 
@@ -19,6 +21,7 @@ function fixedHeader () {
             $("header").removeClass("default").addClass("fixed");
         } else if($(this).scrollTop() <= 30 && $("header").hasClass("fixed")) {
             $("header").removeClass("fixed").addClass("default");
+            $("header").css({'background' : 'none'});
         }
     });
 }
@@ -37,6 +40,9 @@ function smoothScroll () {
 //active class to navigation
 function activeNav() {
     $('li > a').click(function () {
+        $('.nav').hide();
+        $('ul > li').removeClass('liToggle');
+
         $('a').removeClass('active');
         $(event.currentTarget).addClass('active');
     });
@@ -45,17 +51,19 @@ function activeNav() {
 //parallax function
 function scrollParallax () {
     $(window).scroll( function () {
-        let scroll = $(this).scrollTop();
-        let scrollHomeScreen = $('.home > h3, h1, .btn');
+        if (document.documentElement.clientWidth >= 768) {
+            let scroll = $(this).scrollTop();
+            let scrollHomeScreen = $('.home > h3, h1, .btn');
 
-        $(scrollHomeScreen).css(
-            `transform`, `translate(0%, ${scroll/3}%)`
-        );
-
-        if ($(this).scrollTop() > 700) {
             $(scrollHomeScreen).css(
-                `transform`, `translate(0%, 0%)`
-            )
+                `transform`, `translate(0%, ${scroll/5}%)`
+            );
+
+            if ($(this).scrollTop() > 700) {
+                $(scrollHomeScreen).css(
+                    `transform`, `translate(0%, 0%)`
+                )
+            }
         }
     });
 }
@@ -63,7 +71,7 @@ function scrollParallax () {
 //functions services fadeIn
 function fadeServices() {
     $(window).scroll( function () {
-        if ($(this).scrollTop() === $('#services').offset().top){   //offset by elem from start page
+        if ($(this).scrollTop() === $('#services').offset().top && document.documentElement.clientWidth >= 768){   //offset by elem from start page
             anime({
                 targets: '.services',
                 opacity: 0
@@ -100,7 +108,9 @@ function fadeServices() {
 //hover effect to item portfolio cell
 function portfolioHover() {
     $('.hover').mouseover(function () {
-        $(event.currentTarget).siblings('.p-item-footer').addClass('hoverText');
+        if (document.documentElement.clientWidth >= 768) {
+            $(event.currentTarget).siblings('.p-item-footer').addClass('hoverText');
+        }
     });
     $('.hover').mouseleave(function () {
         $(event.currentTarget).siblings('.p-item-footer').removeClass('hoverText');
@@ -110,8 +120,7 @@ function portfolioHover() {
 //aos jquery plugin animate
 function aosAnimate() {
     AOS.init({
-        offset: 200,
-        duration: 450,
+        duration: 250,
         easing: 'ease-in-sine',
         delay: 100,
     });
@@ -139,6 +148,32 @@ function activeClassNav() {
             $('li > a[href="#contact"]').addClass('active');
         }
     });
+}
+
+//toggle menu function
+function toggleMenu() {
+    $('.toggle').click(function () {
+        if (!$('ul > li').hasClass('liToggle')){
+            let toggle = $('.nav');
+            toggle.css('display', 'block');
+
+            $('a').removeClass('active');
+            $("header").css({
+                'background' : '#777'
+            });
+
+            $('ul > li').addClass('liToggle');
+        } else {
+            $('ul > li').removeClass('liToggle');
+        }
+    });
+}
+
+/*Remove fade effects h3 & p section into section */
+function removeEffectsTextH () {
+    if (document.documentElement.clientWidth < 768) {
+        $('h2, p, input, textarea, .item-employer').removeAttr('data-aos');
+    }
 }
 
 /*
