@@ -11,7 +11,6 @@ $(document).ready(function(){
     activeClassNav();//call active navigation function
     toggleMenu();// call toggle menu function
     removeEffectsTextH ();// call function remove effects into h3 & p into section
-    /*parallaxEffectContact();// call parallax function contact us*/
 });
 
 /*Fixed header function*/
@@ -21,7 +20,6 @@ function fixedHeader () {
             $("header").removeClass("default").addClass("fixed");
         } else if($(this).scrollTop() <= 30 && $("header").hasClass("fixed")) {
             $("header").removeClass("fixed").addClass("default");
-            $("header").css({'background' : 'none'});
         }
     });
 }
@@ -40,9 +38,16 @@ function smoothScroll () {
 //active class to navigation
 function activeNav() {
     $('li > a').click(function () {
-        $('.nav').hide();
-        $('ul > li').removeClass('liToggle');
+        if (window.matchMedia('screen and (max-width: 768px)').matches) {
+            $('.nav').hide();
 
+            $('header').css({
+                'background': '#222',
+                'opacity': '.8'
+            });
+        }
+
+        $('ul > li').removeClass('liToggle');
         $('a').removeClass('active');
         $(event.currentTarget).addClass('active');
     });
@@ -51,7 +56,7 @@ function activeNav() {
 //parallax function
 function scrollParallax () {
     $(window).scroll( function () {
-        if (document.documentElement.clientWidth >= 768) {
+        if (window.matchMedia('screen and (min-width: 768px)').matches) {
             let scroll = $(this).scrollTop();
             let scrollHomeScreen = $('.home > h3, h1, .btn');
 
@@ -71,7 +76,7 @@ function scrollParallax () {
 //functions services fadeIn
 function fadeServices() {
     $(window).scroll( function () {
-        if ($(this).scrollTop() === $('#services').offset().top && document.documentElement.clientWidth >= 768){   //offset by elem from start page
+        if ($(this).scrollTop() === $('#services').offset().top && window.matchMedia('screen and (min-width: 768px)').matches){   //offset by elem from start page
             anime({
                 targets: '.services',
                 opacity: 0
@@ -108,7 +113,7 @@ function fadeServices() {
 //hover effect to item portfolio cell
 function portfolioHover() {
     $('.hover').mouseover(function () {
-        if (document.documentElement.clientWidth >= 768) {
+        if (window.matchMedia('screen and (min-width: 768px)').matches) {
             $(event.currentTarget).siblings('.p-item-footer').addClass('hoverText');
         }
     });
@@ -165,28 +170,17 @@ function toggleMenu() {
             $('ul > li').addClass('liToggle');
         } else {
             $('ul > li').removeClass('liToggle');
+            $('.nav').css('display', 'none');
+            $('header').css('background', 'none');
         }
     });
 }
 
 /*Remove fade effects h3 & p section into section */
 function removeEffectsTextH () {
-    if (document.documentElement.clientWidth < 768) {
+    if (window.matchMedia('screen and (max-width: 768px)').matches) {
         $('h2, p, input, textarea, .item-employer').removeAttr('data-aos');
     }
 }
-
-/*
-function parallaxEffectContact() {
-    $(window).scroll( function () {
-        let scroll = $(this).scrollTop();
-        let scrollContactScreen = $('#contact > .container');
-        console.log(scroll);
-
-        $(scrollContactScreen).css(
-            `transform`, `translate(0%, ${-scroll/120}%)`
-        )
-    });
-}*/
 
 
