@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <title>MetroStyle</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css" />
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="node_modules/aos/dist/aos.css" />
-    <link rel="stylesheet" href="dist/style/style.css" />
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="build/style/build.min.css" />
 </head>
 <body>
     <div id="wrapper">
@@ -212,15 +210,15 @@
             <div class="container">
                 <h2 class="title" data-aos="flip-left">Contact us</h2>
                 <p class="description" data-aos="flip-right">Proin iaculis purus consequat sem cure.</p>
-                <form>
+                <form class="clearfix">
                     <div class="form-group">
                         <input type="text" placeholder="YOUR NAME *" required="required" data-aos="fade-left"/> <br>
                         <input type="text" placeholder="YOUR E-MAIL *"  required="required" data-aos="fade-left"/> <br>
                         <input type="text" placeholder="SUBJECT" required="required" data-aos="fade-left"/> <br>
                     </div>
                     <textarea name="massage" class="input-right" id="" cols="30" rows="10" placeholder="YOUR MASSAGE *" required="required" data-aos="fade-right"></textarea>
-                    <button>Send Message</button>
                 </form>
+                <button>Send Message</button>
             </div>
         </section>
         <footer>
@@ -237,9 +235,9 @@
             </div>
         </footer>
     </div>
-    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="node_modules/animejs/anime.min.js"></script>
-    <script type="text/javascript" src="node_modules/aos/dist/aos.js"></script>
-    <script type="text/javascript" src="dist/js/effects.js"></script>
+    <script src="libs/jquery/dist/jquery.min.js"></script>
+    <script src="libs/animejs/anime.min.js"></script>
+    <script src="libs/aos/dist/aos.js"></script>
+    <script src="build/js/effects-min.js"></script>
 </body>
 </html>

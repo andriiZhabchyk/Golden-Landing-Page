@@ -75,10 +75,10 @@
 
 /*class fixed & default header class*/
 .fixed {
-  position:fixed;
+  position: fixed;
   top:0; left:0;
   width:100%;
-  background: #222222;
+  background: #777;
   border-bottom: solid 2px @mainColor;
   opacity: 0.8;
   height: 30px;
@@ -126,6 +126,11 @@
 .container {
   width: 940px;
   margin: 0 auto;
+}
+
+.headerActiveToggle {
+  background: #777;
+  opacity: 1;
 }
 
 /*li toggle*/
@@ -276,6 +281,7 @@ header {
 
   .portfolio-wrap {
     padding-top: 80px;
+    .clearfix;
 
     .portfolio-item {
       float: left;
@@ -295,7 +301,7 @@ header {
       }
 
       .p-item-footer {
-        padding: 25px 20px;
+        padding: 0 20px 25px 20px;
 
           h5 {
             .h5Title;
@@ -309,7 +315,7 @@ header {
           display: block;
           position: absolute;
           transition: all .5s;
-          filter: grayscale(.8);
+          filter: brigtness(.8);
         }
       }
     }
@@ -530,11 +536,12 @@ header {
   form {
     .form-group {
       float: left;
+      width: 48%;
 
       input {
         padding: @formPadding;
         height: 50px;
-        width: 455px;
+        width: 100%;
         margin-bottom: 30px;
         .borderRadiusSizing;
 
@@ -548,19 +555,18 @@ header {
       padding: @formPadding;
       float: right;
       height: 210px;
-      width: 455px;
+      width: 48%;
       .borderRadiusSizing;
     }
+  }
+  button {
+    position: relative;
+    top: 40px;
+    right: 225px;
+    .button;
 
-    button {
-      position: relative;
-      top: 40px;
-      right: 225px;
-      .button;
-
-      &:hover {
-        background: #d6ad21;
-      }
+    &:hover {
+      background: #d6ad21;
     }
   }
 }
@@ -590,7 +596,7 @@ footer {
 /*Phone mode*/
 @media screen and (max-width: 767px) {
   .container {
-    width: 100%;
+    max-width: 100%;
   }
   .button {
     height: 45px;
@@ -648,7 +654,9 @@ footer {
         width: 100%;
         padding: 30px 0 0 0;
         p {
-          opacity: 1
+          opacity: 1;
+          width: 80%;
+          margin: 0 auto;
         }
         &:last-child {
           margin-bottom: 120px;
@@ -663,6 +671,9 @@ footer {
         background: none;
         width: 100%;
         a {
+          img {
+            width: 50%;
+          }
           img:hover {
             margin: 0 auto;
             position: inherit;
@@ -679,16 +690,16 @@ footer {
       .about-item {
         margin-bottom: 30px;
         .about-text {
-          width: 50%;
+          width: 45%;
           float: left;
         }
         .about-img {
-          width: 50%;
+          width: 55%;
           float: right;
 
           img {
-            width: 55%;
-            height: 55%;
+            width: 40%;
+            height: 40%;
           }
 
           &:after {
@@ -735,21 +746,16 @@ footer {
       margin-bottom: 50px;
     }
     form {
-      .form-group {
+      .form-group, textarea {
         float: none;
+        width: 90%;
+        margin: 0 auto;
       }
-      textarea {
-        float: none;
-      }
+    }
+    div {
       button {
-        position: relative;
-        top: 40px;
-        right: 0;
-        .button;
-
-        &:hover {
-          background: #d6ad21;
-        }
+        position: inherit;
+        margin: 40px auto 0 auto;
       }
     }
   }
@@ -776,7 +782,7 @@ footer {
 /*Tablet mode*/
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .container {
-    width: 95%;
+    max-width: 100%;
     margin: 0 auto;
   }
   header {
@@ -845,10 +851,16 @@ footer {
     .portfolio-wrap {
       .portfolio-item {
         background: none;
-        width: 50%;
-        float: left;
-        margin-right: 0;
-        margin-bottom: 0;
+        a {
+          img {
+            width: 95%;
+            height: 95%;
+          }
+          img:hover {
+            display: inherit;
+            position: inherit;
+          }
+        }
       }
     }
   }
@@ -885,32 +897,26 @@ footer {
   }
 
   #contact {
-    background-size: cover;
     .description {
       margin-bottom: 50px;
     }
     form {
-      .container;
+      .clearfix;
       .form-group {
-        input {
-          float: left;
-          width: 280px;
-        }
+        margin-left: 5%;
+        float: left;
+        width: 45%;
       }
       textarea {
-        margin-left: 20px;
+        margin-left: 5%;
+        margin-right: 5%;
         float: right;
-        width: 50%;
+        width: 40%;
       }
-      button {
-        position: relative;
-        right: 150px;
-        .button;
-
-        &:hover {
-          background: #d6ad21;
-        }
-      }
+    }
+    button {
+      position: inherit;
+      margin: 0 auto;
     }
   }
 
@@ -931,7 +937,7 @@ footer {
 /*Notebook mode*/
 @media screen and (min-width: 992px) and (max-width: 1199px) {
   .container {
-    width: 95%;
+    max-width: 100%;
   }
   header {
     .logo {
